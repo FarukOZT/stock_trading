@@ -12,6 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -81,6 +82,14 @@ public class OrderService {
 
         order.setStatus(OrderStatus.CANCELED);
         orderRepository.save(order);
+        return order;
+    }
+
+    public Optional<Order> matchOrder(Long orderId) {
+        Optional<Order> order = orderRepository.findById(orderId);
+        if(order.isPresent()){
+            order.get().setStatus(OrderStatus.MATCHED);
+        }
         return order;
     }
 }
