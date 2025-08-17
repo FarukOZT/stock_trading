@@ -1,0 +1,35 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/brokerage
+    username: postgres
+    password: 12345
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      dialect: org.hibernate.dialect.PostgreSQL9Dialect
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate.format_sql: true
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8180/realms/master
+keycloak:
+  auth-server-url: http://localhost:8180
+  realm: master
+  resource: brokerage-api
+  public-client: false
+  bearer-only: true
+  credentials:
+    secret: gjzYJECI7cAX6sP73xPViTN5hFouXXRG
+
+keycloak-admin:
+  username: admin
+  password: admin
+
+
