@@ -1,6 +1,7 @@
 # stock_trading
 
 You have already downloaded Intellij Idea or Eclipse and docker to run this project before. If you dont have docker you have to install docker.
+
 1- Open project location and run cmd or another terminal.
 
 2- run this command cd src/main/resources
