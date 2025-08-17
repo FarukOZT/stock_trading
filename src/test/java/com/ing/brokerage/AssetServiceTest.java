@@ -1,7 +1,7 @@
 package com.ing.brokerage;
 
 import com.ing.brokerage.model.Asset;
-import com.ing.brokerage.model.AssetDto;
+import com.ing.brokerage.model.dto.AssetDto;
 import com.ing.brokerage.model.Customer;
 import com.ing.brokerage.repository.AssetRepository;
 import com.ing.brokerage.service.AssetService;

@@ -1,4 +1,4 @@
-package com.ing.brokerage.model;
+package com.ing.brokerage.model.dto;
 
 import lombok.Data;
 

@@ -1,7 +1,7 @@
 package com.ing.brokerage.service;
 
 import com.ing.brokerage.model.Asset;
-import com.ing.brokerage.model.AssetDto;
+import com.ing.brokerage.model.dto.AssetDto;
 import com.ing.brokerage.repository.AssetRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
