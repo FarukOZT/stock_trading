@@ -1,0 +1,38 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:brokerage;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8180/realms/master
+keycloak:
+  auth-server-url: http://localhost:8180
+  realm: master
+  resource: brokerage-api
+  public-client: false
+  bearer-only: true
+  credentials:
+    secret: gjzYJECI7cAX6sP73xPViTN5hFouXXRG
+
+keycloak-admin:
+  username: admin
+  password: admin
+
+
